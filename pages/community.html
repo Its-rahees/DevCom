@@ -1,0 +1,251 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pace Developers Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+    <style>
+    /* ==================mobile devices================== */
+    .auth-btns{
+      display: none;
+    }
+    @media (max-width: 768px) {
+
+      .navside{
+    transition: 0.3s;
+    position: absolute;
+    width:0;
+    overflow: hidden;
+    z-index: 99999;
+
+  }
+  .navside ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .auth-btns{
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  
+}
+.signup-btnnav a{
+  display: flex;
+  cursor: pointer;
+  border: none;
+  background-color: teal;
+  height: 35px;
+  width: 80px;
+  /* position: absolute; */
+  /* right: 10px; */
+  margin: 10px;
+  border-radius: 15px;
+  color: #e6e6fa;
+font-size: 17px;
+font-weight: bold;
+/* box-shadow: 2px 2px 1px 2px rgba(0, 128, 128, 0.507); */
+justify-content: center;
+align-items: center;
+text-decoration: none;
+}
+.login-btnnav a{
+  display: flex;
+  cursor: pointer;
+  border: 3px solid teal;
+  background-color:#e6e6fabb;
+  height: 35px;
+  width: 80px;
+  /* position: absolute; */
+  /* right: 100px; */
+  margin: 10px;
+  border-radius: 15px;
+  color: teal;
+font-size: 17px;
+font-weight: bold;
+justify-content: center;
+align-items: center;
+text-decoration: none;}
+    }
+    .active_side{
+  color: teal;
+}
+    </style>
+  </head>
+  <style>
+
+.answer-btn a{
+  color: white;
+  text-decoration: none;
+}
+.answer-btn a:hover{
+  color: teal;
+}
+.statement {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  /* text-overflow: ellipsis; */
+}
+  </style>
+  <body>
+    <!-- header nav start  -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="./images/logo.png" alt="logo failed to load" height="100" />
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a class="link " href="#">Home</a>
+          </li>
+          <li>
+            <a class="link" href="/about">About</a>
+          </li>
+          <li>
+            <a class="link" href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <!-- Rendered conditionally based on localStorage token -->
+            <section id="team" class="team">
+                <div class="container" data-aos="fade-up">
+          
+                  <div class="section-header">
+                    <h2>Our Team</h2>
+                    <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
+                  </div>
+          
+                  <div class="row gy-5">
+          
+                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
+                      <div class="team-member">
+                        <div class="member-img">
+                          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                          <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                          </div>
+                          <h4>Walter White</h4>
+                          <span>Chief Executive Officer</span>
+                        </div>
+                      </div>
+                    </div><!-- End Team Member -->
+          
+                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
+                      <div class="team-member">
+                        <div class="member-img">
+                          <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                          <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                          </div>
+                          <h4>Sarah Jhonson</h4>
+                          <span>Product Manager</span>
+                        </div>
+                      </div>
+                    </div><!-- End Team Member -->
+          
+                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
+                      <div class="team-member">
+                        <div class="member-img">
+                          <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
+                        </div>
+                        <div class="member-info">
+                          <div class="social">
+                            <a href=""><i class="bi bi-twitter"></i></a>
+                            <a href=""><i class="bi bi-facebook"></i></a>
+                            <a href=""><i class="bi bi-instagram"></i></a>
+                            <a href=""><i class="bi bi-linkedin"></i></a>
+                          </div>
+                          <h4>William Anderson</h4>
+                          <span>CTO</span>
+                        </div>
+                      </div>
+                    </div><!-- End Team Member -->
+          
+                  </div>
+          
+                </div>
+              </section><!-- End Team Section -->
+
+  <!-- questions end  -->
+
+  <!-- footer start  -->
+  <div class="footer">
+    <div class="logof">
+      <img src="./images/logo.png" alt="" />
+      <p>
+        PDC Forum is a social questions and Answer Engine. Which will help you
+        to solve your problem and connect with other people.
+      </p>
+    </div>
+    <div class="column">
+      <h1>About Us</h1>
+      <a href="">Meet the Team</a>
+      <a href="">Blog</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </div>
+    <div class="column">
+      <h1>Legal Stuff</h1>
+      <a href="">Terms of Use</a>
+      <a href="">Privacy Policy</a>
+      <a href="">Cookie Policy</a>
+    </div>
+    <div class="column">
+      <h1>Help</h1>
+      <a href="">Knowledge Base</a>
+      <a href="">Support</a>
+    </div>
+    <div class="column">
+      <h1>Follow</h1>
+      <div class="row">
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; PDC. All rights Reserved</p>
+    <p>with love by PACE</p>
+  </div>
+
+  <!-- footer end  -->
+<?php echo $askBtn; ?>
+
+<script>
+
+  function openNav(){
+  document.getElementById('navPhone').style.width="100vw";
+  }
+  
+  function closeNav(){
+  document.getElementById('navPhone').style.width="0";
+  }
+</script>
+  </body>
+</html>
