@@ -152,7 +152,7 @@ if (mysqli_num_rows($result) > 0) {
   display: flex;
   cursor: pointer;
   border: none;
-  background-color: teal;
+  background-color: #3498db;
   height: 35px;
   width: 80px;
   /* position: absolute; */
@@ -170,7 +170,7 @@ text-decoration: none;
 .login-btnnav a{
   display: flex;
   cursor: pointer;
-  border: 3px solid teal;
+  border: 3px solid #3498db;;
   background-color:#e6e6fabb;
   height: 35px;
   width: 80px;
@@ -178,7 +178,7 @@ text-decoration: none;
   /* right: 100px; */
   margin: 10px;
   border-radius: 15px;
-  color: teal;
+  color: #3498db;
 font-size: 17px;
 font-weight: bold;
 justify-content: center;
@@ -186,7 +186,7 @@ align-items: center;
 text-decoration: none;}
     }
     .active_side{
-  color: teal;
+  color: #3498db;;
 }
     </style>
   </head>
@@ -197,7 +197,7 @@ text-decoration: none;}
   text-decoration: none;
 }
 .answer-btn a:hover{
-  color: teal;
+  color: #3498db;;
 }
 .statement {
   display: -webkit-box;

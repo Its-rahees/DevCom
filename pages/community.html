@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>Community Page</title>
+    <title>Developers Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
+
+    <link rel="stylesheet" href="../style.css" />
     <style>
-      body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+          .active_side{
+  color: #3498db;
 }
-
-header {
-    background-color: #3498db;
-    color: #fff;
-    text-align: center;
-    padding: 1em;
+.answer-btn a{
+  color: white;
+  text-decoration: none;
 }
-
+.statement {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
+.sidebar {
+    float: right; /* Float the sidebar to the right */
+    width: calc(30% - 20px); /* Adjust the width of the sidebar */
+    margin-left: 20px; /* Add margin to separate the sidebar from the main content */
+}
 .main-content {
-    max-width: 800px;
+    max-width: calc(70% - 20px);
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    background-color: #333;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-left: 350px;
 }
-
+.content-container {
+    margin-right: 600px; /* Adjust this value based on your side navigation width */
+}
 article {
     margin-bottom: 20px;
 }
 
 h2 {
-    color: #3498db;
+    color: white;
 }
 
 .join-section {
@@ -69,7 +82,7 @@ footer {
 
 .info-box {
     position: relative;
-    background-color: #f9f9f9;
+    background-color: rgb(155, 151, 151);
     padding: 15px;
     border-radius: 8px;
     display: flex;
@@ -92,7 +105,7 @@ footer {
 .read-more,
 .view-events,
 .join-forum {
-    background-color: #3498db;
+    background-color: #333;
     color: #fff;
     padding: 8px 15px;
     border-radius: 5px;
@@ -109,56 +122,207 @@ footer {
 
 /* ... (remaining CSS content) ... */
 
-
     </style>
-</head>
-<body>
-    <header>
-        <h1>Welcome to Our Community</h1>
-        <p>Join the conversation and connect with others who share your interests.</p>
-    </header>
-
-    <!-- ... (previous HTML content) ... -->
-
-<!-- ... (previous HTML content) ... -->
-
-<section class="main-content">
-  <article>
-      <h2>About Us</h2>
-      <div class="info-box about-us">
-          <p>This is a space for like-minded individuals to come together, share ideas, and build a community.</p>
-          <a href="#" class="read-more">Read More</a>
-          <div class="icon">🌟</div>
+  </head>
+  <body>
+    <!-- header nav start  -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="../images/logo.png" alt="logo failed to load" height="100" />
       </div>
-  </article>
-
-  <article>
-      <h2>Upcoming Events</h2>
-      <div class="info-box upcoming-events">
-          <p>Stay tuned for exciting events and activities. Join us and be part of the fun!</p>
-          <a href="#" class="view-events">View Events</a>
-          <div class="icon">📅</div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a class="link" href="/">Home</a>
+          </li>
+          <li>
+            <a class="link" href="/about">About</a>
+          </li>
+          <li>
+            <a class="link" href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <!-- Rendered conditionally based on localStorage token -->
+            <a class="link" href="/blog">
+              <i class="fa fa-user"></i> <?php echo $name ?>
+            </a>
+          </li>            
+        </ul>
       </div>
-  </article>
-
-  <article>
-      <h2>Discussion Forum</h2>
-      <div class="info-box discussion-forum">
-          <p>Participate in discussions on various topics. Share your thoughts and learn from others.</p>
-          <a href="#" class="join-forum">Join the Forum</a>
-          <div class="icon">💬</div>
+      <div class="search">
+        <input type="text" placeholder="Search" />
       </div>
-  </article>
-</section>
+      <div class="search-btn">
+        <button>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <div class="login-btn">
+      <?php echo $loginBtn; ?>
+        
+      </div>
+      <div class="signup-btn">
+        <?php echo $loggedInBtn; ?>
+      </div>
+    
+    </div>
+<!-- header nav close -->
 
-<!-- ... (remaining HTML content) ... -->
 
 
-<!-- ... (remaining HTML content) ... -->
+<!-- side nav start -->
+<div class="menu-bars">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="navside">
+    <div class="cancelbtn">X</div>
+
+    <ul>
+      <li>
+        <a class="sidelink" href="../index.php">
+          <i class="fa fa-home"></i> Home
+        </a>
+      </li>
+      <li>
+        <a class="sidelink" href="#">
+          <i class="fa fa-book"></i> Questions
+        </a>
+      </li>
+      <li>
+        <a class="sidelink" href="#">
+          <i class="fa fa-users"></i> Community
+        </a>
+      </li>
+      <li>
+        <i class="fa fa-user"></i> Admins
+      </li>
+      <li>
+        <i class="fa fa-tags"></i> Tags
+      </li>
+      <li>
+        <i class="fa fa-file-code-o">..</i> Docs
+      </li>
+    </ul>
+    <div class="login-btnnav">
+      <button>Login</button>
+    </div>
+    <div class="signup-btnnav">
+      <button>Signup</button>
+    </div>
+    <div class="estra">
+      <ul>
+        <li>
+          <a class="linkli" href="/about">About</a>
+        </li>
+        <li>
+          <a class="linkli" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- side nav close  -->
 
 
-    <footer>
-        <p>&copy; 2023 Your Community. All rights reserved.</p>
-    </footer>
+
+  <!-- questions start  -->
+  <div class="something">
+        <h1>Community</h1>
+    </div>
+    <section class="main-content">
+        <article>
+            <h2>About Us
+                
+            </h2>
+            <div class="info-box about-us">
+                <p>This is a space for like-minded individuals to come together, share ideas, and build a community.</p>
+                <a href="#" class="read-more">Read More</a>
+                <div class="icon">🌟</div>
+            </div>
+        </article>
+      
+        <article>
+            <h2>Upcoming Events</h2>
+            <div class="info-box upcoming-events">
+                <p>Stay tuned for exciting events and activities. Join us and be part of the fun!</p>
+                <a href="#" class="view-events">View Events</a>
+                <div class="icon">📅</div>
+            </div>
+        </article>
+      
+        <article>
+            <h2>Discussion Forum</h2>
+            <div class="info-box discussion-forum">
+                <p>Participate in discussions on various topics. Share your thoughts and learn from others.</p>
+                <a href="#" class="join-forum">Join the Forum</a>
+                <div class="icon">💬</div>
+            </div>
+        </article>
+      </section>
+<?php 
+        echo $questionLoop;
+?>
+    <!-- Rendered Notes -->
+    <!-- You can use server-side templating or JavaScript to dynamically generate the QueItem components -->
+    <!-- Example static HTML -->
+    <div class="que-item">
+        <!-- QueItem HTML -->
+    </div>
+
+  <!-- questions end  -->
+
+
+
+
+  <!-- footer start  -->
+  <div class="footer">
+    <div class="logof">
+      <img src="../../images/logo.png" alt="" />
+      <p>
+        PDC Forum is a social questions and Answer Engine. Which will help you
+        to solve your problem and connect with other people.
+      </p>
+    </div>
+    <div class="column">
+      <h1>About Us</h1>
+      <a href="">Meet the Team</a>
+      <a href="">Blog</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </div>
+    <div class="column">
+      <h1>Legal Stuff</h1>
+      <a href="">Terms of Use</a>
+      <a href="">Privacy Policy</a>
+      <a href="">Cookie Policy</a>
+    </div>
+    <div class="column">
+      <h1>Help</h1>
+      <a href="">Knowledge Base</a>
+      <a href="">Support</a>
+    </div>
+    <div class="column">
+      <h1>Follow</h1>
+      <div class="row">
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; PDC. All rights Reserved</p>
+    <p>with love by PACE</p>
+  </div>
+
+  <!-- footer end  -->
+<?php echo $askBtn; ?>
+
 </body>
 </html>

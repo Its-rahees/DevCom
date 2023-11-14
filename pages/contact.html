@@ -1,59 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="styles.css">
-    <title>Contact Us</title>
-</head>
-<body>
-    <header class="bg-primary text-white text-center py-5">
-        <div class="container">
-            <h1>Contact Us</h1>
-            <p>We'd love to hear from you! Reach out for any inquiries or suggestions.</p>
-        </div>
-    </header>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Developers Community</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
 
-    <section class="contact-form container mt-5">
-        <div class="row">
-            <div class="col-lg-6">
-                <form action="#" method="post" id="contactForm" autocomplete="off">
-                    <div class="form-group">
-                        <label for="name">Your Name:</label>
-                        <input type="text" id="name" name="name" class="form-control" required>
-                    </div>
+    <link rel="stylesheet" href="../style.css" />
+    <style>
+          .active_side{
+  color: #3498db;
+}
+.answer-btn a{
+  color: white;
+  text-decoration: none;
+}
+.statement {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  
+}
 
-                    <div class="form-group">
-                        <label for="email">Your Email:</label>
-                        <input type="email" id="email" name="email" class="form-control" required>
-                    </div>
+    </style>
+  </head>
+  <body>
+    <!-- header nav start  -->
+    <div class="navbar">
+      <div class="logo">
+        <img src="../images/logo.png" alt="logo failed to load" height="100" />
+      </div>
+      <div class="nav">
+        <ul>
+          <li>
+            <a class="link" href="/">Home</a>
+          </li>
+          <li>
+            <a class="link" href="/about">About</a>
+          </li>
+          <li>
+            <a class="link" href="/contact">Contact Us</a>
+          </li>
+          <li>
+            <!-- Rendered conditionally based on localStorage token -->
+            <a class="link" href="/blog">
+              <i class="fa fa-user"></i> <?php echo $name ?>
+            </a>
+          </li>            
+        </ul>
+      </div>
+      <div class="search">
+        <input type="text" placeholder="Search" />
+      </div>
+      <div class="search-btn">
+        <button>
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <div class="login-btn">
+      <?php echo $loginBtn; ?>
+        
+      </div>
+      <div class="signup-btn">
+        <?php echo $loggedInBtn; ?>
+      </div>
+    
+    </div>
+<!-- header nav close -->
 
-                    <div class="form-group">
-                        <label for="message">Your Message:</label>
-                        <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
-                    </div>
 
-                    <button type="submit" id="submitBtn" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
 
-            <div class="col-lg-6">
-                <!-- Replace this illustration with your own image or illustration -->
-                <img src="https://via.placeholder.com/500" alt="Illustration" class="img-fluid">
-            </div>
-        </div>
-    </section>
+<!-- side nav start -->
+<div class="menu-bars">
+    <i class="fa fa-bars"></i>
+  </div>
+  <div class="navside">
+    <div class="cancelbtn">X</div>
 
-    <footer class="bg-primary text-white text-center py-3">
-        <div class="container">
-            <p>&copy; 2023 Your Company. All rights reserved.</p>
-        </div>
-    </footer>
+    <ul>
+      <li>
+        <a class="sidelink" href="../index.php">
+          <i class="fa fa-home"></i> Home
+        </a>
+      </li>
+      <li>
+        <a class="sidelink" href="#">
+          <i class="fa fa-book"></i> Questions
+        </a>
+      </li>
+      <li>
+        <a class="sidelink" href="#">
+          <i class="fa fa-users"></i> Community
+        </a>
+      </li>
+      <li>
+        <i class="fa fa-user"></i> Admins
+      </li>
+      <li>
+        <i class="fa fa-tags"></i> Tags
+      </li>
+      <li>
+        <i class="fa fa-file-code-o">..</i> Docs
+      </li>
+    </ul>
+    <div class="login-btnnav">
+      <button>Login</button>
+    </div>
+    <div class="signup-btnnav">
+      <button>Signup</button>
+    </div>
+    <div class="estra">
+      <ul>
+        <li>
+          <a class="linkli" href="/about">About</a>
+        </li>
+        <li>
+          <a class="linkli" href="/contact">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+  <!-- side nav close  -->
+
+
+
+  <!-- questions start  -->
+  <div class="something">
+        <h1>About Us</h1>
+    </div>
+<?php 
+        echo $questionLoop;
+?>
+    <!-- Rendered Notes -->
+    <!-- You can use server-side templating or JavaScript to dynamically generate the QueItem components -->
+    <!-- Example static HTML -->
+    <div class="que-item">
+        <!-- QueItem HTML -->
+    </div>
+
+  <!-- questions end  -->
+
+
+
+
+  <!-- footer start  -->
+  <div class="footer">
+    <div class="logof">
+      <img src="../../images/logo.png" alt="" />
+      <p>
+        PDC Forum is a social questions and Answer Engine. Which will help you
+        to solve your problem and connect with other people.
+      </p>
+    </div>
+    <div class="column">
+      <h1>About Us</h1>
+      <a href="">Meet the Team</a>
+      <a href="">Blog</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </div>
+    <div class="column">
+      <h1>Legal Stuff</h1>
+      <a href="">Terms of Use</a>
+      <a href="">Privacy Policy</a>
+      <a href="">Cookie Policy</a>
+    </div>
+    <div class="column">
+      <h1>Help</h1>
+      <a href="">Knowledge Base</a>
+      <a href="">Support</a>
+    </div>
+    <div class="column">
+      <h1>Follow</h1>
+      <div class="row">
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+        <a href="">
+          <i class="fa fa-instagram"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>&copy; PDC. All rights Reserved</p>
+    <p>with love by PACE</p>
+  </div>
+
+  <!-- footer end  -->
+<?php echo $askBtn; ?>
+
 </body>
 </html>

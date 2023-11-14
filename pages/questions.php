@@ -100,7 +100,7 @@ mysqli_close($conn);
     <link rel="stylesheet" href="../style.css" />
     <style>
           .active_side{
-  color: teal;
+  color: #3498db;
 }
 .answer-btn a{
   color: white;
