@@ -4,7 +4,7 @@
 }
 ::selection {
     color: lavender;
-    background: teal;
+    background: #3498db;
    
   } 
 body{
@@ -72,7 +72,7 @@ body{
 
 }
 .column a:hover{
-    color: teal;
+    color: #3498db;
   
 
 }
@@ -186,7 +186,7 @@ body{
 
 }
 .acolumn a:hover{
-    color: teal;
+    color: #3498db;
   
 
 }
@@ -278,7 +278,7 @@ body{
     max-width: 80vw;
     outline: none;
     border: none;
-    border-bottom: 5px solid teal;
+    border-bottom: 5px solid #3498db;
     height: 40px;
     min-height: 30px;
     font-size: 20px;
@@ -291,7 +291,7 @@ body{
     max-width: 80vw;
     outline: none;
     border: none;
-    border-bottom: 5px solid teal;
+    border-bottom: 5px solid #3498db;
     height: 300px;
     min-height: 70px;
     font-size: 20px;
@@ -307,14 +307,14 @@ body{
     padding: 10px 20px;
     border-radius: 5px;
     border: none;
-    background-color: teal;
+    background-color: #3498db;
     color: lavender;
     font-weight: bold;
     margin-bottom: 100px;
     cursor: pointer;
 }
 .container1 label{
-    color: teal;
+    color: #3498db;
     font-size: 20px;
     font-weight: bold;
     float: left;
@@ -330,7 +330,7 @@ body{
     background: lavender;
 }
 .askbtn{
-    background: teal;
+    background: #3498db;
     color:lavender;
     padding: 15px 20px;
     z-index: 10000;
@@ -472,7 +472,7 @@ body{
         bottom: -2px;
         width: 0%;
         height: 2px;
-        background-color: teal;
+        background-color: #3498db;
         transition: .4s;
       }
       
@@ -494,7 +494,7 @@ body{
       }
         
       .input-div.focus > .i > i{
-        color: teal;
+        color: #3498db;
       }
       
       .input-div > div > input{
@@ -529,7 +529,7 @@ body{
       
         }
         .a:hover{
-          color: teal;
+          color: #3498db;
         }
       
         .btn{
@@ -627,7 +627,7 @@ body{
     min-width: 96%;
     background: rgb(209, 209, 209);
     border-radius: 5px;
-    outline:2px solid teal;
+    outline:2px solid #3498db;
     font-size: 15px;
     color: #000;
 }
@@ -638,6 +638,6 @@ body{
     font-size: 15px;
     font-weight: bold;
     color: lavender;
-    background: teal;
+    background: #3498db;
     border: none;
 }

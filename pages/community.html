@@ -1,251 +1,164 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pace Developers Community</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Poppins:600&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a81368914c.js"></script>
-
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="styles.css">
+    <title>Community Page</title>
     <style>
-    /* ==================mobile devices================== */
-    .auth-btns{
-      display: none;
-    }
-    @media (max-width: 768px) {
+      body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+}
 
-      .navside{
-    transition: 0.3s;
-    position: absolute;
-    width:0;
-    overflow: hidden;
-    z-index: 99999;
+header {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+}
 
-  }
-  .navside ul{
+.main-content {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+article {
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #3498db;
+}
+
+.join-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #3498db;
+    color: #fff;
+}
+
+.join-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #fff;
+    color: #3498db;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.join-button:hover {
+    background-color: #3498db;
+    color: #fff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: #fff;
+}
+/* ... (previous CSS content) ... */
+
+.info-box {
+    position: relative;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  .auth-btns{
-  display: flex;
-  width: 100vw;
-  justify-content: center;
-  
+    flex-direction: column; /* Updated to column layout */
+    align-items: flex-start; /* Align items to the start of the column */
+    overflow: hidden;
 }
-.signup-btnnav a{
-  display: flex;
-  cursor: pointer;
-  border: none;
-  background-color: teal;
-  height: 35px;
-  width: 80px;
-  /* position: absolute; */
-  /* right: 10px; */
-  margin: 10px;
-  border-radius: 15px;
-  color: #e6e6fa;
-font-size: 17px;
-font-weight: bold;
-/* box-shadow: 2px 2px 1px 2px rgba(0, 128, 128, 0.507); */
-justify-content: center;
-align-items: center;
-text-decoration: none;
+
+.info-box p {
+    margin-bottom: 10px; /* Add some bottom margin to separate text and buttons */
 }
-.login-btnnav a{
-  display: flex;
-  cursor: pointer;
-  border: 3px solid teal;
-  background-color:#e6e6fabb;
-  height: 35px;
-  width: 80px;
-  /* position: absolute; */
-  /* right: 100px; */
-  margin: 10px;
-  border-radius: 15px;
-  color: teal;
-font-size: 17px;
-font-weight: bold;
-justify-content: center;
-align-items: center;
-text-decoration: none;}
-    }
-    .active_side{
-  color: teal;
+
+.icon {
+    font-size: 24px;
+    margin-left: 15px;
 }
+
+/* Additional styles for enhanced elements */
+
+.read-more,
+.view-events,
+.join-forum {
+    background-color: #3498db;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.info-box:hover .read-more,
+.upcoming-events:hover .view-events,
+.discussion-forum:hover .join-forum {
+    opacity: 1;
+}
+
+/* ... (remaining CSS content) ... */
+
+
     </style>
-  </head>
-  <style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Our Community</h1>
+        <p>Join the conversation and connect with others who share your interests.</p>
+    </header>
 
-.answer-btn a{
-  color: white;
-  text-decoration: none;
-}
-.answer-btn a:hover{
-  color: teal;
-}
-.statement {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  overflow: hidden;
-  /* text-overflow: ellipsis; */
-}
-  </style>
-  <body>
-    <!-- header nav start  -->
-    <div class="navbar">
-      <div class="logo">
-        <img src="./images/logo.png" alt="logo failed to load" height="100" />
+    <!-- ... (previous HTML content) ... -->
+
+<!-- ... (previous HTML content) ... -->
+
+<section class="main-content">
+  <article>
+      <h2>About Us</h2>
+      <div class="info-box about-us">
+          <p>This is a space for like-minded individuals to come together, share ideas, and build a community.</p>
+          <a href="#" class="read-more">Read More</a>
+          <div class="icon">🌟</div>
       </div>
-      <div class="nav">
-        <ul>
-          <li>
-            <a class="link " href="#">Home</a>
-          </li>
-          <li>
-            <a class="link" href="/about">About</a>
-          </li>
-          <li>
-            <a class="link" href="/contact">Contact Us</a>
-          </li>
-          <li>
-            <!-- Rendered conditionally based on localStorage token -->
-            <section id="team" class="team">
-                <div class="container" data-aos="fade-up">
-          
-                  <div class="section-header">
-                    <h2>Our Team</h2>
-                    <p>Architecto nobis eos vel nam quidem vitae temporibus voluptates qui hic deserunt iusto omnis nam voluptas asperiores sequi tenetur dolores incidunt enim voluptatem magnam cumque fuga.</p>
-                  </div>
-          
-                  <div class="row gy-5">
-          
-                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="200">
-                      <div class="team-member">
-                        <div class="member-img">
-                          <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                          <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                          </div>
-                          <h4>Walter White</h4>
-                          <span>Chief Executive Officer</span>
-                        </div>
-                      </div>
-                    </div><!-- End Team Member -->
-          
-                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="400">
-                      <div class="team-member">
-                        <div class="member-img">
-                          <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                          <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                          </div>
-                          <h4>Sarah Jhonson</h4>
-                          <span>Product Manager</span>
-                        </div>
-                      </div>
-                    </div><!-- End Team Member -->
-          
-                    <div class="col-xl-4 col-md-6 d-flex" data-aos="zoom-in" data-aos-delay="600">
-                      <div class="team-member">
-                        <div class="member-img">
-                          <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                        </div>
-                        <div class="member-info">
-                          <div class="social">
-                            <a href=""><i class="bi bi-twitter"></i></a>
-                            <a href=""><i class="bi bi-facebook"></i></a>
-                            <a href=""><i class="bi bi-instagram"></i></a>
-                            <a href=""><i class="bi bi-linkedin"></i></a>
-                          </div>
-                          <h4>William Anderson</h4>
-                          <span>CTO</span>
-                        </div>
-                      </div>
-                    </div><!-- End Team Member -->
-          
-                  </div>
-          
-                </div>
-              </section><!-- End Team Section -->
+  </article>
 
-  <!-- questions end  -->
-
-  <!-- footer start  -->
-  <div class="footer">
-    <div class="logof">
-      <img src="./images/logo.png" alt="" />
-      <p>
-        PDC Forum is a social questions and Answer Engine. Which will help you
-        to solve your problem and connect with other people.
-      </p>
-    </div>
-    <div class="column">
-      <h1>About Us</h1>
-      <a href="">Meet the Team</a>
-      <a href="">Blog</a>
-      <a href="">About Us</a>
-      <a href="">Contact Us</a>
-    </div>
-    <div class="column">
-      <h1>Legal Stuff</h1>
-      <a href="">Terms of Use</a>
-      <a href="">Privacy Policy</a>
-      <a href="">Cookie Policy</a>
-    </div>
-    <div class="column">
-      <h1>Help</h1>
-      <a href="">Knowledge Base</a>
-      <a href="">Support</a>
-    </div>
-    <div class="column">
-      <h1>Follow</h1>
-      <div class="row">
-        <a href="">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram"></i>
-        </a>
-        <a href="">
-          <i class="fa fa-instagram"></i>
-        </a>
+  <article>
+      <h2>Upcoming Events</h2>
+      <div class="info-box upcoming-events">
+          <p>Stay tuned for exciting events and activities. Join us and be part of the fun!</p>
+          <a href="#" class="view-events">View Events</a>
+          <div class="icon">📅</div>
       </div>
-    </div>
-  </div>
-  <div class="copyright">
-    <p>&copy; PDC. All rights Reserved</p>
-    <p>with love by PACE</p>
-  </div>
+  </article>
 
-  <!-- footer end  -->
-<?php echo $askBtn; ?>
+  <article>
+      <h2>Discussion Forum</h2>
+      <div class="info-box discussion-forum">
+          <p>Participate in discussions on various topics. Share your thoughts and learn from others.</p>
+          <a href="#" class="join-forum">Join the Forum</a>
+          <div class="icon">💬</div>
+      </div>
+  </article>
+</section>
 
-<script>
+<!-- ... (remaining HTML content) ... -->
 
-  function openNav(){
-  document.getElementById('navPhone').style.width="100vw";
-  }
-  
-  function closeNav(){
-  document.getElementById('navPhone').style.width="0";
-  }
-</script>
-  </body>
+
+<!-- ... (remaining HTML content) ... -->
+
+
+    <footer>
+        <p>&copy; 2023 Your Community. All rights reserved.</p>
+    </footer>
+</body>
 </html>

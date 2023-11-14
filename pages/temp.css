@@ -14,7 +14,7 @@
     min-width: 96%;
     background: rgb(209, 209, 209);
     border-radius: 5px;
-    outline:2px solid teal;
+    outline:2px solid #3498db;
     font-size: 15px;
     color: #000;
 }
@@ -25,11 +25,11 @@
     font-size: 15px;
     font-weight: bold;
     color: lavender;
-    background: teal;
+    background: #3498db;
     border: none;
 }
 strong{
-    color: teal;
+    color: #3498db;
 }
 .answers{
     width: 78vw;
